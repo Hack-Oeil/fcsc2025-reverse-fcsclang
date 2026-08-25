@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head lang="ar">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - تحديات Cyrhades في الـ CTF</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="./assets/js/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Vérifie si la fenêtre est dans une iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+            // Active la coloration syntaxique :
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js non chargé !");
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>تحدي #583</h3>
+                            <h2 class="section-title">fcsclang</h2>
+                            <p>
+قام زميلك (من بين أمور أخرى عاشق للغة رستم / Rust) بإنشاء لغة جديدة رائدة ومبتكرة.
+<br /><br />
+ستكون هذه اللغة، بلا شك، ثورية للصناعة بشرط أن تكون موثقة.
+<br /><br />
+"لا تقلق، إنها تُقرأ مثل الرواية"، هكذا يؤكد لك زميلك، ثم يقدم لك كراكمي (crackme) بهذه اللغة ليوضح لك مدى بساطة قراءة اللغة وفهمها.
+<br /><br />
+تبقى متشككاً ومتردداً، لكنك تقبل التحدي.
+                            </p>
+                            <h4>الملف المراد دراسته:</h4>
+                            <p>../files/fcsclang.tar.xz</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2025</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                الرابط الرسمي :
+                                <a target="_blank" href="https://hackropole.fr/fr/challenges/reverse/fcsc2025-reverse-fcsclang/">https://hackropole.fr/fr/challenges/reverse/fcsc2025-reverse-fcsclang/</a>
+                                <br />
+                                المؤلف: Juju
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>التعلم</h3>
+                            <h2 class="section-title">التوثيق ومقاطع الفيديو</h2>
+                            <p class="section-subtitle">
+                                لا توجد وثائق متاحة حالياً
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>المساعدة</h3>
+                            <h2 class="section-title">نصائح وتلميحات</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">موضوع على
+                                    ديسكورد (Discord)</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="الرجوع إلى أعلى الصفحة" title="الرجوع إلى أعلى الصفحة"></a>
+    </div>
+</body>
+
+</html>

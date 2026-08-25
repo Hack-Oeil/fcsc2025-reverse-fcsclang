@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head lang="zh">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Cyrhades CTF 挑战</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="./assets/js/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 检查窗口是否在 iframe 中
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+            // 启用代码语法高亮：
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js 未加载！");
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Challenge #583</h3>
+                            <h2 class="section-title">fcsclang</h2>
+                            <p>
+你的同事（同时也是一名 Rust 爱好者）创造了一种前卫的新编程语言。
+<br /><br />
+只要有完善的文档，这种语言无疑将为整个行业带来革命性的变革。
+<br /><br />
+“别担心，读起来就像读小说一样轻松”，你的同事向你保证，并给了你一个用该语言编写的 crackme，以向你展示该语言阅读和理解起来有多简单。
+<br /><br />
+你虽然心存疑虑，但还是接受了挑战。
+                            </p>
+                            <h4>需分析的文件：</h4>
+                            <p>../files/fcsclang.tar.xz</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2025</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                官方链接：
+                                <a target="_blank" href="https://hackropole.fr/fr/challenges/reverse/fcsc2025-reverse-fcsclang/">https://hackropole.fr/fr/challenges/reverse/fcsc2025-reverse-fcsclang/</a>
+                                <br />
+                                作者：Juju
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>学习</h3>
+                            <h2 class="section-title">文档与视频</h2>
+                            <p class="section-subtitle">
+                                暂无文档
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>帮助</h3>
+                            <h2 class="section-title">提示与线索</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Discord
+                                    讨论帖</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="返回顶部" title="返回顶部"></a>
+    </div>
+</body>
+
+</html>
